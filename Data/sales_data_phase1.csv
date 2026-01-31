@@ -1,0 +1,16 @@
+customer_id,order_id,order_date,ship_date,product_category,sales_amount,discount,region,customer_age,email
+C001,O1001,2023-01-05,2023-01-04,Tech,1200,100,North East,29,john.doe@email.com
+C002,O1002,2023-02-10,2023-02-15,technology,-500,50,NE,45,jane@@email.com
+C003,O1003,2023-03-18,,Furniture,800,,South,17,
+C004,O1004,18-04-2023,2023-04-25,Office Supplies,300,20,west,200,mike@email
+C002,O1002,2023-02-10,2023-02-15,Technology,-500,50,NE,45,jane@@email.com
+C005,O1005,2024-12-01,2024-12-05,TECH,1500,200,North-East,34,sara@email.com
+C006,O1006,2023-06-11,2023-06-18,Office,0,0,,28,abc@email.com
+C007,O1007,2025-01-01,2025-01-05,Furniture,400,30,South,31,tom@email.com
+C008,O1008,2023-07-22,2023-07-30,office supplies,250,10,West,,invalid@
+C009,O1009,2023-08-15,2023-08-20,Tech,999999,0,North East,40,invalidemail.com
+C010,O1010,2023-09-10,2023-09-12,,600,50,South,27,lisa@email.com
+C011,O1011,2023-10-05,2023-10-10,Technology,450,30,NE,22,user11@email.com
+C012,O1012,2023-10-08,2023-10-09,Furniture,700,70,East,65,user12@email.com
+C013,O1013,2023-11-01,2023-10-30,Tech,900,90,North East,38,user13@email.com
+C014,O1014,2023-11-05,2023-11-12,Office Supplies,150,5,West,19,user14@email.com
