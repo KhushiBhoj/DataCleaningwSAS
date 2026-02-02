@@ -1,0 +1,15 @@
+customer_id,order_id,order_date,ship_date,sales_amount,discount,customer_age,product_category,region,email,flags
+C001,O1001,2023-01-05,,1200,100,29,Technology,North East,john.doe@email.com,OrderDate:OK; ShipDate:SHIP_BEFORE_ORDER; Sales:           .; Discount:           .; Age:           .; Email:Y
+C002,O1002,2023-02-10,2023-02-15,,50,45,Technology,North East,jane@@email.com,OrderDate:OK; ShipDate:OK; Sales:           .; Discount:           .; Age:           .; Email:Y
+C003,O1003,2023-03-18,,800,0,,Furniture,South,,OrderDate:OK; ShipDate:MISSING_SHIP_DATE; Sales:           .; Discount:           .; Age:           .; Email:N
+C004,O1004,2023-04-18,2023-04-25,300,20,,Office Supplies,West,mike@email,OrderDate:OK; ShipDate:OK; Sales:           .; Discount:           .; Age:           .; Email:N
+C005,O1005,2024-12-01,2024-12-05,1500,200,34,Technology,North East,sara@email.com,OrderDate:OK; ShipDate:OK; Sales:           .; Discount:           .; Age:           .; Email:Y
+C006,O1006,2023-06-11,2023-06-18,,0,28,Office Supplies,Unknown,abc@email.com,OrderDate:OK; ShipDate:OK; Sales:           .; Discount:           .; Age:           .; Email:Y
+C007,O1007,2025-01-01,2025-01-05,400,30,31,Furniture,South,tom@email.com,OrderDate:OK; ShipDate:OK; Sales:           .; Discount:           .; Age:           .; Email:Y
+C008,O1008,2023-07-22,2023-07-30,250,10,,Office Supplies,West,invalid@,OrderDate:OK; ShipDate:OK; Sales:           .; Discount:           .; Age:           .; Email:N
+C009,O1009,2023-08-15,2023-08-20,999999,0,40,Technology,North East,invalidemail.com,OrderDate:OK; ShipDate:OK; Sales:           .; Discount:           .; Age:           .; Email:N
+C010,O1010,2023-09-10,2023-09-12,600,50,27,Unknown,South,lisa@email.com,OrderDate:OK; ShipDate:OK; Sales:           .; Discount:           .; Age:           .; Email:Y
+C011,O1011,2023-10-05,2023-10-10,450,30,22,Technology,North East,user11@email.com,OrderDate:OK; ShipDate:OK; Sales:           .; Discount:           .; Age:           .; Email:Y
+C012,O1012,2023-10-08,2023-10-09,700,70,65,Furniture,East,user12@email.com,OrderDate:OK; ShipDate:OK; Sales:           .; Discount:           .; Age:           .; Email:Y
+C013,O1013,2023-11-01,,900,90,38,Technology,North East,user13@email.com,OrderDate:OK; ShipDate:SHIP_BEFORE_ORDER; Sales:           .; Discount:           .; Age:           .; Email:Y
+C014,O1014,2023-11-05,2023-11-12,150,5,19,Office Supplies,West,user14@email.com,OrderDate:OK; ShipDate:OK; Sales:           .; Discount:           .; Age:           .; Email:Y
