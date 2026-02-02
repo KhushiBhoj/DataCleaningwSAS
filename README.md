@@ -1,4 +1,4 @@
-# 📂 Data Cleaning with SAS (Phase 1)
+# Data Cleaning with SAS (Phase 1)
 
 ## Project Overview
 
