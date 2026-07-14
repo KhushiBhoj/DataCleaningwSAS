@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_datacleaning_phase1",
+  "source_file": "SAS Files/DataCleaningPhase1.sas",
+  "source_blob_sha": "e256bbff15d64795b1be310da7fad7963d61ac1b",
+  "source_commit": "a7d5d5e6c210a80a9310769fa28ce204e1be40b1",
+  "notes": "Full Phase-1 sales data-cleaning pipeline (dedup by customer_id+order_id, dual-format date parsing with yymmdd10./ddmmyy10., ship-before-order + missing-ship flagging, product_category/region standardization, numeric sanity edits, email validation, catx flag column). Two edits vs. upstream: (1) the hardcoded SAS OnDemand PROC IMPORT path is replaced with an inline DATALINES step carrying the same 15 sample rows and column types so the bundle is self-contained; (2) the terminal PROC EXPORT to a hardcoded path is replaced with a PROC PRINT of the final table so the cleaned result is visible in the listing. Sample dates are the same rows shifted uniformly back five years (2023->2018 etc.) so every row stays on the near side of the script's own order_dt > today() future-date check; all edge cases (duplicate C002 pair, ddmmyy row C004, ship-before-order C001/C013, missing ship C003, category/region/email variants) are preserved. Cleaning logic, PROC options, and output semantics are unchanged from the author's code."
+}

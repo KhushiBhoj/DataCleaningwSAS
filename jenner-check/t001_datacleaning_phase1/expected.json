@@ -1,0 +1,14 @@
+{
+  "_captured_at": "2026-07-14T10:43:00Z",
+  "_captured_run_id": "r_f80541c3ab974f1eb7bc0e2542885594",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote work.sales_raw (15 rows, 10 columns).",
+    "NOTE: 1 duplicate observations were deleted.",
+    "NOTE: Wrote work.sales_stage1_clean (14 rows, 13 columns).",
+    "NOTE: Wrote work.sales_phase1_final (14 rows, 11 columns)."
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

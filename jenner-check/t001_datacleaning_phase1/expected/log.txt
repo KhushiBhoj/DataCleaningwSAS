@@ -1,0 +1,92 @@
+NOTE: Jenner v1.5.30 (build v1.5.30+unknown.20260714T020019Z.x86_64-unknown-linux-gnu)
+
+NOTE: Option OBS changed to 100.
+NOTE: DATA work.sales_raw
+
+NOTE: Processing inline DATALINES (15 lines)
+
+NOTE: Read 15 rows from DATALINES.
+NOTE: Wrote work.sales_raw (15 rows, 10 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC CONTENTS data=work.sales_raw
+
+NOTE: PROC CONTENTS completed: 15 observations, 10 variables
+NOTE: PROC SQL 
+
+NOTE: PROC SQL statement used.
+NOTE: PROC MEANS
+NOTE: PROC MEANS statement used.
+NOTE: PROC FREQ
+NOTE: ODS plot written: freq_product_category.spec.json
+NOTE: ODS plot written: freq_region.spec.json
+NOTE: PROC FREQ statement used.
+NOTE: PROC MEANS
+NOTE: PROC MEANS statement used.
+NOTE: PROC FREQ
+NOTE: ODS plot written: freq_order_date.spec.json
+NOTE: ODS plot written: freq_ship_date.spec.json
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=work.sales_raw
+
+NOTE: 1 duplicate observations were deleted.
+NOTE: Read 15 rows from work.sales_raw.
+NOTE: Wrote work.sales_dedup (14 rows, 10 columns).
+NOTE: PROC SORT statement used.
+NOTE: DATA work.sales_dates_clean
+
+
+NOTE: Read 14 rows from work.sales_dedup.
+NOTE: Wrote work.sales_dates_clean (14 rows, 11 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA work.sales_dates_clean
+
+
+NOTE: Read 14 rows from work.sales_dates_clean.
+NOTE: Wrote work.sales_dates_clean (14 rows, 12 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA work.sales_cat_clean
+
+
+NOTE: Read 14 rows from work.sales_dates_clean.
+NOTE: Wrote work.sales_cat_clean (14 rows, 12 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA work.sales_numeric_clean
+
+
+NOTE: Read 14 rows from work.sales_cat_clean.
+NOTE: Wrote work.sales_numeric_clean (14 rows, 12 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA work.sales_stage1_clean
+
+
+NOTE: Read 14 rows from work.sales_numeric_clean.
+NOTE: Wrote work.sales_stage1_clean (14 rows, 13 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA work.sales_phase1_final
+
+
+NOTE: Read 14 rows from work.sales_stage1_clean.
+NOTE: Wrote work.sales_phase1_final (14 rows, 11 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC SORT data=work.sales_phase1_final
+
+NOTE: Read 14 rows from work.sales_phase1_final.
+NOTE: Wrote work.sales_phase1_final (14 rows, 11 columns).
+NOTE: PROC SORT statement used.
+NOTE: PROC PRINT data=work.sales_phase1_final
+
+NOTE: PROC PRINT completed: 14 observations printed, 11 variables

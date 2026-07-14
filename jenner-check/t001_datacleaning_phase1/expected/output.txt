@@ -1,0 +1,124 @@
+
+PROC CONTENTS
+-------------------------------------------------------------------------------
+
+Data Set Name: work.sales_raw
+Observations:  15
+Variables:     10
+
+Variables (in alphabetical order):
+
+  #  Variable          Type    Len  Format  Label
+---  ----------------  ----  -----  ------  -----
+  1  customer_age       Num      8          
+  2  customer_id       Char      8          
+  3  discount           Num      8          
+  4  email             Char     40          
+  5  order_date        Char     12          
+  6  order_id          Char      8          
+  7  product_category  Char     20          
+  8  region            Char     20          
+  9  sales_amount       Num      8          
+ 10  ship_date         Char     12          
+
+-------------------------------------------------------------------------------
+
+total_rows
+----------
+        15
+                                                  The MEANS Procedure
+
+ Variable            N   N Miss
+ ------------------------------
+ sales_amount       15        0
+ discount           14        1
+ customer_age       14        1
+ ------------------------------
+
+                                                   The FREQ Procedure
+
+                                              Cumulative    Cumulative
+product_category    Frequency    Percent     Frequency      Percent
+-------------------------------------------------------------------------
+Furniture                   3     21.43            3        21.43
+Office                      1      7.14            4        28.57
+Office Supplies             2     14.29            6        42.86
+TECH                        1      7.14            7        50.00
+Tech                        3     21.43           10        71.43
+Technology                  2     14.29           12        85.71
+office supplies             1      7.14           13        92.86
+technology                  1      7.14           14       100.00
+
+                                        Cumulative    Cumulative
+region        Frequency    Percent     Frequency      Percent
+-------------------------------------------------------------------
+East                  1      7.14            1         7.14
+NE                    3     21.43            4        28.57
+North East            3     21.43            7        50.00
+North-East            1      7.14            8        57.14
+South                 3     21.43           11        78.57
+West                  2     14.29           13        92.86
+west                  1      7.14           14       100.00
+                                                  The MEANS Procedure
+
+ Variable              Minimum            Maximum              Mean
+ ------------------------------------------------------------------
+ sales_amount     -500.0000000     999999.0000000     67083.2666667
+ discount            0.0000000        200.0000000        50.3571429
+ customer_age       17.0000000        200.0000000        45.7142857
+ ------------------------------------------------------------------
+
+                                                   The FREQ Procedure
+
+                                        Cumulative    Cumulative
+order_date    Frequency    Percent     Frequency      Percent
+-------------------------------------------------------------------
+18-04-2018            1      6.67            1         6.67
+2018-01-05            1      6.67            2        13.33
+2018-02-10            2     13.33            4        26.67
+2018-03-18            1      6.67            5        33.33
+2018-06-11            1      6.67            6        40.00
+2018-07-22            1      6.67            7        46.67
+2018-08-15            1      6.67            8        53.33
+2018-09-10            1      6.67            9        60.00
+2018-10-05            1      6.67           10        66.67
+2018-10-08            1      6.67           11        73.33
+2018-11-01            1      6.67           12        80.00
+2018-11-05            1      6.67           13        86.67
+2019-12-01            1      6.67           14        93.33
+2020-01-01            1      6.67           15       100.00
+
+                                        Cumulative    Cumulative
+ship_date     Frequency    Percent     Frequency      Percent
+-------------------------------------------------------------------
+2018-01-04            1      7.14            1         7.14
+2018-02-15            2     14.29            3        21.43
+2018-04-25            1      7.14            4        28.57
+2018-06-18            1      7.14            5        35.71
+2018-07-30            1      7.14            6        42.86
+2018-08-20            1      7.14            7        50.00
+2018-09-12            1      7.14            8        57.14
+2018-10-09            1      7.14            9        64.29
+2018-10-10            1      7.14           10        71.43
+2018-10-30            1      7.14           11        78.57
+2018-11-12            1      7.14           12        85.71
+2019-12-05            1      7.14           13        92.86
+2020-01-05            1      7.14           14       100.00
+
+customer_id  order_id  order_date   ship_date  sales_amount  discount  customer_age  product_category      region               email                                                                       flags
+-----------  --------  ----------  ----------  ------------  --------  ------------  ----------------  ----------  ------------------  --------------------------------------------------------------------------
+C001         O1001     2018-01-05           .          1200       100            29  Technology        North East  john.doe@email.com  OrderDate:OK; ShipDate:SHIP_BEFORE_ORDER; Sales:; Discount:; Age:; Email:Y
+C002         O1002     2018-02-10  2018-02-15             .        50            45  Technology        North East  jane@@email.com     OrderDate:OK; ShipDate:OK; Sales:; Discount:; Age:; Email:Y
+C003         O1003     2018-03-18           .           800         0             .  Furniture         South                           OrderDate:OK; ShipDate:MISSING_SHIP_DATE; Sales:; Discount:; Age:; Email:N
+C004         O1004     2018-04-18  2018-04-25           300        20             .  Office Supplies   West        mike@email          OrderDate:OK; ShipDate:OK; Sales:; Discount:; Age:; Email:N
+C005         O1005     2019-12-01  2019-12-05          1500       200            34  Technology        North East  sara@email.com      OrderDate:OK; ShipDate:OK; Sales:; Discount:; Age:; Email:Y
+C006         O1006     2018-06-11  2018-06-18             .         0            28  Office Supplies   Unknown     abc@email.com       OrderDate:OK; ShipDate:OK; Sales:; Discount:; Age:; Email:Y
+C007         O1007     2020-01-01  2020-01-05           400        30            31  Furniture         South       tom@email.com       OrderDate:OK; ShipDate:OK; Sales:; Discount:; Age:; Email:Y
+C008         O1008     2018-07-22  2018-07-30           250        10             .  Office Supplies   West        invalid@            OrderDate:OK; ShipDate:OK; Sales:; Discount:; Age:; Email:N
+C009         O1009     2018-08-15  2018-08-20        999999         0            40  Technology        North East  invalidemail.com    OrderDate:OK; ShipDate:OK; Sales:; Discount:; Age:; Email:N
+C010         O1010     2018-09-10  2018-09-12           600        50            27  Unknown           South       lisa@email.com      OrderDate:OK; ShipDate:OK; Sales:; Discount:; Age:; Email:Y
+C011         O1011     2018-10-05  2018-10-10           450        30            22  Technology        North East  user11@email.com    OrderDate:OK; ShipDate:OK; Sales:; Discount:; Age:; Email:Y
+C012         O1012     2018-10-08  2018-10-09           700        70            65  Furniture         East        user12@email.com    OrderDate:OK; ShipDate:OK; Sales:; Discount:; Age:; Email:Y
+C013         O1013     2018-11-01           .           900        90            38  Technology        North East  user13@email.com    OrderDate:OK; ShipDate:SHIP_BEFORE_ORDER; Sales:; Discount:; Age:; Email:Y
+C014         O1014     2018-11-05  2018-11-12           150         5            19  Office Supplies   West        user14@email.com    OrderDate:OK; ShipDate:OK; Sales:; Discount:; Age:; Email:Y
+
